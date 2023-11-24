@@ -1,0 +1,4 @@
+#!/bin/sh
+DISP_NAM=$(bspc query -M -m focused --names)
+DISP_NUM=$(xrandr --listmonitors | grep " $DISP_NAM" | awk -F: '{ print $1; }')
+dmenu_run -m ${DISP_NUM}
