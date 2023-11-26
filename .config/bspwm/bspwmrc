@@ -1,0 +1,43 @@
+#! /bin/sh
+
+MON_COUNT=$(xrandr --listmonitors | grep  "^ " | wc -l)
+
+if [ $MON_COUNT == 2 ]; then
+    bspc monitor eDP1 -d I II 
+    bspc monitor DP1 -d III IV
+    $HOME/.local/bin/succade -s edp1 &
+    $HOME/.local/bin/succade -s dp1 &
+elif [ $MON_COUNT == 3 ]; then
+    bspc monitor eDP1 -d I IV 
+    bspc monitor DP1 -d II     
+    bspc monitor DP3 -d III      
+    $HOME/.local/bin/succade -s edp1 &
+    $HOME/.local/bin/succade -s dp1 &
+    $HOME/.local/bin/succade -s dp3 &
+else 
+    bspc monitor -d I II III IV
+    $HOME/.local/bin/succade -s edp1 &
+fi
+
+#$HOME/.local/bin/succade &
+#$HOME/.config/polybar/launch.sh &
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config focused_border_color "#FFFFFF"
+bspc config normal_border_color "#222222"
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Chromium desktop='II' focus=on
+bspc rule -a TelegramDesktop desktop='III' focus=on follow=on
+bspc rule -a 'htop' desktop='IV' focus=on follow=on
+bspc rule -a 'mutt' desktop='IV' focus=on follow=on
+bspc rule -a 'tasks' desktop='IV' focus=on follow=on
+bspc rule -a 'notes' desktop='IV' focus=on follow=on
+bspc rule -a 'thunderbird' desktop='IV' focus=on follow=on
