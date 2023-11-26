@@ -8,6 +8,7 @@ if [ "${OS_ID}" == "arch" ]; then
     sudo pacman -S ly bspwm sxhkd \
         task taskwarrior-tui zk fzf mutt thunderbird syncthing \
         zsh git vim \
+        wpa_supplicant \
         docker docker-compose
 else
     echo "Unknown distro ($OS_ID)! Install packages skipped"
