@@ -110,7 +110,7 @@ mouse-left = wpa_gui
 
 [battery]
 label =""
-command = "cat /sys/class/power_supply/BAT0/capacity"
+command = "~/.local/bin/battery.sh"
 interval = 5
 
 [date]
