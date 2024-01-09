@@ -2,21 +2,33 @@
 
 MON_COUNT=$(xrandr --listmonitors | grep  "^ " | wc -l)
 
-if [ $MON_COUNT == 2 ]; then
-    bspc monitor eDP-1 -d I II 
-    bspc monitor DP-1 -d III IV
-    $HOME/.local/bin/succade -s edp1 &
-    $HOME/.local/bin/succade -s dp1 &
-elif [ $MON_COUNT == 3 ]; then
-    bspc monitor eDP-1 -d I IV 
-    bspc monitor DP-1 -d II     
-    bspc monitor DP-3 -d III      
-    $HOME/.local/bin/succade -s edp1 &
-    $HOME/.local/bin/succade -s dp1 &
-    $HOME/.local/bin/succade -s dp3 &
-else 
-    bspc monitor -d I II III IV
-    $HOME/.local/bin/succade -s edp1 &
+if [ $HOST == "archlinux" ]; then
+    if [ $MON_COUNT == 2 ]; then
+        bspc monitor DP-0 -d I II 
+        bspc monitor DP-2 -d III IV
+        $HOME/.local/bin/succade -s DP-0 &
+        $HOME/.local/bin/succade -s DP-2 &
+    else
+        bspc monitor -d I II III IV
+        $HOME/.local/bin/succade -s edp1 &
+    fi    
+else
+    if [ $MON_COUNT == 2 ]; then
+        bspc monitor DP-0 -d I II 
+        bspc monitor DP-2 -d III IV
+        $HOME/.local/bin/succade -s DP-0 &
+        $HOME/.local/bin/succade -s DP-2 &
+    elif [ $MON_COUNT == 3 ]; then
+        bspc monitor eDP-1 -d I IV 
+        bspc monitor DP-1 -d II     
+        bspc monitor DP-3 -d III      
+        $HOME/.local/bin/succade -s edp1 &
+        $HOME/.local/bin/succade -s dp1 &
+        $HOME/.local/bin/succade -s dp3 &
+    else 
+        bspc monitor -d I II III IV
+        $HOME/.local/bin/succade -s edp1 &
+    fi
 fi
 
 pgrep -x sxhkd > /dev/null || sxhkd &
