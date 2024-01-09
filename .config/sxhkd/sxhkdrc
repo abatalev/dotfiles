@@ -10,12 +10,18 @@ super + Return
 super + c
 	chromium
 
-super + t
+super + m
 	telegram-desktop
 
 # program launcher
 super + @space
 	.local/bin/fdmenu
+
+super + n
+	alacritty --class cur-notes -e zk edit --interactive --sort=modified-
+
+super + z
+	alacritty --class cur-tasks -e taskwarrior-tui
 
 # make sxhkd reload its configuration files:
 super + Escape

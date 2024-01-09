@@ -28,8 +28,8 @@ chmod +x install.sh
 
 ## Links
 
-- zk
+- zk -- https://github.com/mickael-menu/zk
 
 ## TODO
 
-- bat
+- bat -- https://github.com/sharkdp/bat

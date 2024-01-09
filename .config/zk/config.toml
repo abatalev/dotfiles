@@ -1,0 +1,14 @@
+[notebook]
+dir = "/home/andrey/mysync/private/notes/"
+
+[note]
+language = "ru"
+extension = "md"
+
+[extra]
+author = "andrey"
+
+[tool]
+editor = "vim"
+shell = "/usr/bin/zsh"
+pager = "less -FIRX"

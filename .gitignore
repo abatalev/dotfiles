@@ -1,0 +1,14 @@
+.config/oh-my-zsh/
+.config/libfm/
+.config/syncthing/
+.config/vlc/
+.config/chromium/
+.config/font-manager/
+.config/htop/
+.config/pcmanfm/
+.config/procps/
+.config/pulse/
+.config/go/
+.config/dconf/
+.config/timewarrior/
+.config/geany/
