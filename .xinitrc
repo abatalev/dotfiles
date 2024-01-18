@@ -35,8 +35,8 @@ fi
 MON_COUNT=$(xrandr --listmonitors | grep  "^ " | wc -l)
 
 if [ $MON_COUNT == 2 ]; then
-    xrandr --output DP-2 --left-of DP-0
-    feh --no-fehbg --bg-scale wallpaper-dp-0.jpg wallpaper-dp-2.jpg
+    xrandr --output DP1 --left-of eDP1
+    feh --no-fehbg --bg-scale wallpaper-islands.jpg wallpaper-street.jpg
 elif [ $MON_COUNT == 3 ]; then
     xrandr --output DP3 --right-of eDP1
     xrandr --output DP1 --left-of eDP1
@@ -44,6 +44,12 @@ elif [ $MON_COUNT == 3 ]; then
 else 
     feh --no-fehbg --bg-scale wallpaper-islands.jpg
 fi
+
+#
+
+redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') &
+
+#
 
 xbindkeys
 

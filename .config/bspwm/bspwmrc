@@ -2,34 +2,25 @@
 
 MON_COUNT=$(xrandr --listmonitors | grep  "^ " | wc -l)
 
-if [ $HOST == "archlinux" ]; then
-    if [ $MON_COUNT == 2 ]; then
-        bspc monitor DP-0 -d I II 
-        bspc monitor DP-2 -d III IV
-        $HOME/.local/bin/succade -s DP-0 &
-        $HOME/.local/bin/succade -s DP-2 &
-    else
-        bspc monitor -d I II III IV
-        $HOME/.local/bin/succade -s edp1 &
-    fi    
-else
-    if [ $MON_COUNT == 2 ]; then
-        bspc monitor DP-0 -d I II 
-        bspc monitor DP-2 -d III IV
-        $HOME/.local/bin/succade -s DP-0 &
-        $HOME/.local/bin/succade -s DP-2 &
-    elif [ $MON_COUNT == 3 ]; then
-        bspc monitor eDP-1 -d I IV 
-        bspc monitor DP-1 -d II     
-        bspc monitor DP-3 -d III      
-        $HOME/.local/bin/succade -s edp1 &
-        $HOME/.local/bin/succade -s dp1 &
-        $HOME/.local/bin/succade -s dp3 &
-    else 
-        bspc monitor -d I II III IV
-        $HOME/.local/bin/succade -s edp1 &
-    fi
+if [ $MON_COUNT == 2 ]; then
+    bspc monitor eDP1 -d I II 
+    bspc monitor DP1 -d III IV
+    $HOME/.local/bin/succade -s edp1 &
+    $HOME/.local/bin/succade -s dp1 &
+elif [ $MON_COUNT == 3 ]; then
+    bspc monitor eDP1 -d I IV 
+    bspc monitor DP1 -d II     
+    bspc monitor DP3 -d III      
+    $HOME/.local/bin/succade -s edp1 &
+    $HOME/.local/bin/succade -s dp1 &
+    $HOME/.local/bin/succade -s dp3 &
+else 
+    bspc monitor -d I II III IV
+    $HOME/.local/bin/succade -s edp1 &
 fi
+
+#$HOME/.local/bin/succade &
+#$HOME/.config/polybar/launch.sh &
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -51,3 +42,6 @@ bspc rule -a 'tasks' desktop='IV' focus=on follow=on
 bspc rule -a 'notes' desktop='IV' focus=on follow=on
 bspc rule -a 'thunderbird' desktop='IV' focus=on follow=on
 bspc rule -a Pavucontrol state=floating floating=on focus=on follow=on
+bspc rule -a 'tmux' desktop='I' focus=on follow=on
+
+alacritty --class tmux -e .local/bin/rmux.sh

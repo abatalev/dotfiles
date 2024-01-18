@@ -9,10 +9,18 @@ if [ "${OS_ID}" == "arch" ]; then
         task taskwarrior-tui zk fzf mutt thunderbird syncthing \
         zsh git vim \
         wpa_supplicant \
-        docker docker-compose
+        docker docker-compose \
+        brightnessctl redshift \
+        neovim tmux
 else
     echo "Unknown distro ($OS_ID)! Install packages skipped"
 fi
+
+echo "Tuning tmux"
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+
+echo "Tuning NeoVim" 
+nvim --headless "+Lazy! sync" +qa
 
 echo "Build applications"
 

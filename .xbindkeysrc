@@ -1,0 +1,7 @@
+# Increase brightness
+"brightnessctl -q -d intel_backlight s +10%"
+   XF86MonBrightnessUp
+
+# Decrease brightness
+"brightnessctl -q -d intel_backlight s 10%-"
+   XF86MonBrightnessDown
