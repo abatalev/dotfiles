@@ -14,10 +14,10 @@ if [ $HOST == "archlinux" ]; then
     fi    
 else
     if [ $MON_COUNT == 2 ]; then
-        bspc monitor DP-0 -d I II 
-        bspc monitor DP-2 -d III IV
-        $HOME/.local/bin/succade -s DP-0 &
-        $HOME/.local/bin/succade -s DP-2 &
+        bspc monitor eDP1 -d I II 
+        bspc monitor DP1 -d III IV
+        $HOME/.local/bin/succade -s edp1 &
+        $HOME/.local/bin/succade -s dp1 &
     elif [ $MON_COUNT == 3 ]; then
         bspc monitor eDP1 -d I IV 
         bspc monitor DP1 -d II     
@@ -53,3 +53,7 @@ bspc rule -a 'mutt' desktop='IV' focus=on follow=on
 bspc rule -a 'tasks' desktop='IV' focus=on follow=on
 bspc rule -a 'notes' desktop='IV' focus=on follow=on
 bspc rule -a 'thunderbird' desktop='IV' focus=on follow=on
+bspc rule -a Pavucontrol state=floating floating=on focus=on follow=on
+bspc rule -a 'tmux' desktop='I' focus=on follow=on
+
+alacritty --class tmux -e .local/bin/rmux.sh
