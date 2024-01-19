@@ -57,7 +57,7 @@ else
 fi
 
 cp -r -n .config/* ${HOME}/.config/
-cp -r -n .local/ ${HOME}/.local/
+cp -r -n .local/* ${HOME}/.local/
 
 mk_dir "${HOME}/tmp"
 
