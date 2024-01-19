@@ -19,9 +19,9 @@ else
         $HOME/.local/bin/succade -s DP-0 &
         $HOME/.local/bin/succade -s DP-2 &
     elif [ $MON_COUNT == 3 ]; then
-        bspc monitor eDP-1 -d I IV 
-        bspc monitor DP-1 -d II     
-        bspc monitor DP-3 -d III      
+        bspc monitor eDP1 -d I IV 
+        bspc monitor DP1 -d II     
+        bspc monitor DP3 -d III      
         $HOME/.local/bin/succade -s edp1 &
         $HOME/.local/bin/succade -s dp1 &
         $HOME/.local/bin/succade -s dp3 &
@@ -30,6 +30,9 @@ else
         $HOME/.local/bin/succade -s edp1 &
     fi
 fi
+
+#$HOME/.local/bin/succade &
+#$HOME/.config/polybar/launch.sh &
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -50,4 +53,3 @@ bspc rule -a 'mutt' desktop='IV' focus=on follow=on
 bspc rule -a 'tasks' desktop='IV' focus=on follow=on
 bspc rule -a 'notes' desktop='IV' focus=on follow=on
 bspc rule -a 'thunderbird' desktop='IV' focus=on follow=on
-bspc rule -a Pavucontrol state=floating floating=on focus=on follow=on
