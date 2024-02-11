@@ -26,7 +26,7 @@ if [ "${OS_ID}" == "arch" ]; then
         zsh git vim \
         wpa_supplicant \
         docker docker-compose \
-        brightnessctl redshift \
+        brightnessctl redshift jq \
         neovim tmux
 else
     echo "!!! Unknown distro ($OS_ID)! Install packages skipped"

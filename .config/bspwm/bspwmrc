@@ -31,9 +31,6 @@ else
     fi
 fi
 
-#$HOME/.local/bin/succade &
-#$HOME/.config/polybar/launch.sh &
-
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc config border_width         2
