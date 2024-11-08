@@ -27,7 +27,8 @@ if [ "${OS_ID}" == "arch" ]; then
         wpa_supplicant \
         docker docker-compose \
         brightnessctl redshift jq \
-        neovim tmux
+        neovim tmux \
+        amixer
 else
     echo "!!! Unknown distro ($OS_ID)! Install packages skipped"
 fi
