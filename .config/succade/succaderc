@@ -1,3 +1,29 @@
+[DP-0]
+command="~/.local/bin/lemonbar -O DP-0"
+name = "dp0"
+blocks = "desk_dp0 user || mail tasks notes syncthing date"
+height = 32
+#areas = 0
+foreground = "#aaaaaa"
+background = "#000000"
+line-color = "#555555"
+line-width = 2
+#font = "RobotoMono Nerd Font Mono Lt:size=16"
+font = "CaskaydiaCove Nerd Font Mono:size=16"
+
+[DP-2]
+command="~/.local/bin/lemonbar -O DP-2"
+name = "dp2"
+blocks = "desk_dp2 user || mail tasks notes syncthing date"
+height = 32
+#areas = 16
+foreground = "#aaaaaa"
+background = "#000000"
+line-color = "#555555"
+line-width = 2
+#font = "RobotoMono Nerd Font Mono Lt:size=16"
+font = "CaskaydiaCove Nerd Font Mono:size=14"
+
 [edp1]
 command="~/.local/bin/lemonbar -O eDP-1 -f 'CaskaydiaCove Nerd Font Mono:size=16'"
 name = "edp1"
@@ -44,9 +70,21 @@ font = "CaskaydiaCove Nerd Font Mono:size=16"
 label-foreground = "#bbbbbb"
 affix-foreground = "#555555"
 margin = 4
-#padding-left = 1
-#underline = true
+padding-left = 1
+underline = false
 overline = true
+
+[desk_dp0]
+command = "~/.local/bin/desk.sh DP-0"
+trigger = "bspc subscribe"
+label = " "
+margin-left = 8
+
+[desk_dp2]
+command = "~/.local/bin/desk.sh DP-2"
+trigger = "bspc subscribe"
+label = " "
+margin-left = 8
 
 [desk_edp1]
 command = "~/.local/bin/desk.sh eDP-1"

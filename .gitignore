@@ -15,3 +15,7 @@
 .config/tmux/plugins/
 .config/libreoffice/
 .config/Code - OSS/
+.config/foot/
+.config/transmission-daemon/
+.config/systemd/
+.config/waybar/
