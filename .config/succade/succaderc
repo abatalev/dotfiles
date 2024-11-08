@@ -1,18 +1,21 @@
 [edp1]
-command="~/.local/bin/lemonbar -O eDP1"
+command="~/.local/bin/lemonbar -O eDP-1 -f 'CaskaydiaCove Nerd Font Mono:size=16'"
 name = "edp1"
-blocks = "desk_edp1 user || weather wlan memory mail tasks notes syncthing battery date"
+blocks = "desk_edp1 user || weather wlan memory mail tasks notes syncthing sound battery date"
 height = 32
-areas = 16
+#areas = 16
 foreground = "#aaaaaa"
 background = "#000000"
 line-color = "#555555"
-line-width = 2
+line-width = 1
+label-font = "CaskaydiaCove Nerd Font Mono:size=16"
 #font = "RobotoMono Nerd Font Mono Lt:size=16"
-font = "CaskaydiaCove Nerd Font Mono:size=16"
+#font = "CaskaydiaCove Nerd Font Mono:size=16"
+font = "Noto Color Emoji:size=16"
+#separator = " | "
 
 [dp1]
-command="~/.local/bin/lemonbar -O DP1"
+command="~/.local/bin/lemonbar -O DP-1"
 name = "dp1"
 blocks = "desk_dp1 user || weather memory mail tasks notes syncthing battery date"
 height = 32
@@ -25,7 +28,7 @@ line-width = 2
 font = "CaskaydiaCove Nerd Font Mono:size=16"
 
 [dp3]
-command="~/.local/bin/lemonbar -O DP3"
+command="~/.local/bin/lemonbar -O DP-3"
 name = "dp3"
 blocks = "desk_dp3 user || weather wlan memory mail tasks notes syncthing battery date"
 height = 32
@@ -40,80 +43,88 @@ font = "CaskaydiaCove Nerd Font Mono:size=16"
 [default]
 label-foreground = "#bbbbbb"
 affix-foreground = "#555555"
-margin = 8
-padding-left = 1
-underline = true
+margin = 4
+#padding-left = 1
+#underline = true
 overline = true
 
 [desk_edp1]
-command = "~/.local/bin/desk.sh eDP1"
+command = "~/.local/bin/desk.sh eDP-1"
 trigger = "bspc subscribe"
 label = " "
 margin-left = 8
 
 [desk_dp1]
-command = "~/.local/bin/desk.sh DP1"
+command = "~/.local/bin/desk.sh DP-1"
 trigger = "bspc subscribe"
 label = " "
 margin-left = 8
 
 [desk_dp3]
-command = "~/.local/bin/desk.sh DP3"
+command = "~/.local/bin/desk.sh DP-3"
 trigger = "bspc subscribe"
-label = " "
+label = "\uf390 "
 margin-left = 8
 
 [user]
 command = "whoami"
-label = ""
+label = "\uf007"
 
 [weather]
-label="W"
-command="echo 󰖖"
+command = "~/.local/bin/weather.sh"
+interval = 60
 
 [memory]
-command = "echo 1"
-label = "M"
+command = "~/.local/bin/memory.sh"
+label = "󰍛"
 interval = 5
 mouse-left = "alacritty --class htop -e htop"
 
 [mail]
 command = "echo 1"
-label = ""
+label = "\uf01c"
 interval = 10
 mouse-left = "alacritty --class mutt -e mutt"
 mouse-right = "thunderbird"
 
 [tasks]
 command = "task count"
-label=""
+label="\uf0a3"
 interval = 5
 mouse-left="alacritty --class tasks -e taskwarrior-tui"
 mouse-right="alacritty --class tasks -e task burndown.daily"
 
 [notes]
 command = "echo 1"
-label = "N"
-interval = 0
+label = "\uf249"
+interval = 5
 mouse-left="alacritty --class notes -e zk edit --interactive --sort=modified-"
 
 [syncthing]
 command = "echo 1"
-label = ""
+label = "\uf2f1"
 mouse-left="syncthing"
+interval = 10
 
 [wlan]
 command = "~/.local/bin/wlan.sh"
 interval = 5
-label = ""
+label = "\uf1eb"
 mouse-left = wpa_gui
+
+[sound]
+label = "S"
+command = "echo 1"
+mouse-left = "pavucontrol"
+interval = 10
 
 [battery]
 label =""
 command = "~/.local/bin/battery.sh"
 interval = 5
+#   mouse-left="alacritty --class powertop -e powertop"
 
 [date]
-#label = ">󰔛<"
+label = "\uf017"
 command = "date +'%Y-%m-%d %H:%M:%S'"
 interval = 1
