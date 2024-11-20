@@ -13,3 +13,6 @@ done
 cp -u .xinitrc ${HOME}/
 cp -r -u .config/* ${HOME}/.config/
 cp -r -u .local/* ${HOME}/.local/
+
+killall dunst
+dunstify "DotFiles" Updated

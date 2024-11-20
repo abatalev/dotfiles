@@ -30,7 +30,7 @@ if [ "${OS_ID}" == "arch" ]; then
         docker docker-compose \
         brightnessctl redshift jq \
         neovim tmux \
-        amixer
+        amixer dunst libnotify
 else
     echo "!!! Unknown distro ($OS_ID)! Install packages skipped"
 fi
