@@ -35,9 +35,9 @@ fi
 MON_COUNT=$(xrandr --listmonitors | grep  "^ " | wc -l)
 
 if [ $HOST == "archlinux" ]; then
-    if [ $MON_COUNT == 2 ]; then
+if [ $MON_COUNT == 2 ]; then
         xrandr --output DP-2 --left-of DP-0
-        feh --no-fehbg --bg-scale wallpaper-dp-0.jpg wallpaper-dp-2.jpg
+    feh --no-fehbg --bg-scale wallpaper-dp-0.jpg wallpaper-dp-2.jpg
     else 
         feh --no-fehbg --bg-scale wallpaper-dp-0.jpg
     fi
@@ -45,13 +45,13 @@ elif
     if [ $MON_COUNT == 2 ]; then
         xrandr --output DP-1 --left-of eDP-1
         feh --no-fehbg --bg-scale wallpaper-islands.jpg wallpaper-street.jpg
-    elif [ $MON_COUNT == 3 ]; then
+elif [ $MON_COUNT == 3 ]; then
         xrandr --output DP-3 --right-of eDP-1
         xrandr --output DP-1 --left-of eDP-1
-        feh --no-fehbg --bg-scale wallpaper-islands.jpg wallpaper-street.jpg wallpaper-forest.jpg   
-    else 
-        feh --no-fehbg --bg-scale wallpaper-islands.jpg
-    fi
+    feh --no-fehbg --bg-scale wallpaper-islands.jpg wallpaper-street.jpg wallpaper-forest.jpg   
+else 
+    feh --no-fehbg --bg-scale wallpaper-islands.jpg
+fi
 fi
 
 #

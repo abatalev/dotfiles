@@ -33,25 +33,22 @@ height = 32
 foreground = "#aaaaaa"
 background = "#000000"
 line-color = "#555555"
-line-width = 1
-label-font = "CaskaydiaCove Nerd Font Mono:size=16"
+line-width = 2
 #font = "RobotoMono Nerd Font Mono Lt:size=16"
-#font = "CaskaydiaCove Nerd Font Mono:size=16"
-font = "Noto Color Emoji:size=16"
-#separator = " | "
+font = "CaskaydiaCove Nerd Font Mono:size=16"
 
 [dp1]
 command="~/.local/bin/lemonbar -O DP-1"
 name = "dp1"
 blocks = "desk_dp1 user || weather memory mail tasks notes syncthing battery date"
 height = 32
-areas = 16
+#areas = 16
 foreground = "#aaaaaa"
 background = "#000000"
 line-color = "#555555"
 line-width = 2
 #font = "RobotoMono Nerd Font Mono Lt:size=16"
-font = "CaskaydiaCove Nerd Font Mono:size=16"
+font = "c:size=16"
 
 [dp3]
 command="~/.local/bin/lemonbar -O DP-3"
@@ -64,45 +61,50 @@ background = "#000000"
 line-color = "#555555"
 line-width = 2
 #font = "RobotoMono Nerd Font Mono Lt:size=16"
-font = "CaskaydiaCove Nerd Font Mono:size=16"
+font = "CaskaydiaCode Nerd Font Mono:size=16"
 
 [default]
 label-foreground = "#bbbbbb"
 affix-foreground = "#555555"
-margin = 4
+margin = 8
 padding-left = 1
 underline = false
-overline = true
+overline = false
 
 [desk_dp0]
 command = "~/.local/bin/desk.sh DP-0"
 trigger = "bspc subscribe"
 label = " "
 margin-left = 8
+raw = true
 
 [desk_dp2]
 command = "~/.local/bin/desk.sh DP-2"
 trigger = "bspc subscribe"
 label = " "
 margin-left = 8
+raw = true
 
 [desk_edp1]
 command = "~/.local/bin/desk.sh eDP-1"
 trigger = "bspc subscribe"
 label = " "
 margin-left = 8
+raw = true
 
 [desk_dp1]
 command = "~/.local/bin/desk.sh DP-1"
 trigger = "bspc subscribe"
 label = " "
 margin-left = 8
+raw = true
 
 [desk_dp3]
 command = "~/.local/bin/desk.sh DP-3"
 trigger = "bspc subscribe"
-label = "\uf390 "
+label = " "
 margin-left = 8
+raw = true
 
 [user]
 command = "whoami"
