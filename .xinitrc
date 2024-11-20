@@ -38,7 +38,7 @@ MON_COUNT=$(xrandr --listmonitors | grep  "^ " | wc -l)
 
 if [ "x${HOST}" == "xarchlinux" ]; then
     if [ $MON_COUNT == 2 ]; then
-        xrandr --output DP-2 --left-of DP-0
+        xrandr --output DP-0 --left-of DP-2
         feh --no-fehbg --bg-scale wallpaper-dp-0.jpg wallpaper-dp-2.jpg
     else 
         feh --no-fehbg --bg-scale wallpaper-dp-0.jpg
