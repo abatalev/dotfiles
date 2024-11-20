@@ -1,2 +1,3 @@
 #!/bin/sh
-echo -e '\U0001f329'
+res=$(curl -s "https://wttr.in/spb?M&format=2")
+echo -e "$res"
