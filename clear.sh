@@ -1,6 +1,8 @@
 #!/bin/sh
 IFS=$'\n'; for i in $(git ls-files --others --exclude-standard)
 do
-    echo ">${i}"
-    rm -f "${i}"
+    if [ "x${i}" != "x" ]; then
+        echo ">${i}"
+        rm -f "${i}"
+    fi
 done
