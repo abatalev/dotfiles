@@ -9,7 +9,7 @@ background = "#000000"
 line-color = "#555555"
 line-width = 2
 #font = "RobotoMono Nerd Font Mono Lt:size=16"
-font = "CaskaydiaCove Nerd Font Mono:size=16"
+font = "CaskaydiaCove Nerd Font Mono:size=10"
 
 [DP-2]
 command="~/.local/bin/lemonbar -O DP-2"
@@ -25,7 +25,7 @@ line-width = 2
 font = "CaskaydiaCove Nerd Font Mono:size=14"
 
 [edp1]
-command="~/.local/bin/lemonbar -O eDP-1 -f 'CaskaydiaCove Nerd Font Mono:size=16'"
+command="~/.local/bin/lemonbar -O eDP-1 -f 'CaskaydiaCove Nerd Font Mono:size=10'"
 name = "edp1"
 blocks = "desk_edp1 user || weather wlan memory mail tasks notes syncthing sound battery date"
 height = 32
@@ -35,7 +35,7 @@ background = "#000000"
 line-color = "#555555"
 line-width = 2
 #font = "RobotoMono Nerd Font Mono Lt:size=16"
-font = "CaskaydiaCove Nerd Font Mono:size=16"
+#font = "CaskaydiaCove Nerd Font Mono:size=16"
 
 [dp1]
 command="~/.local/bin/lemonbar -O DP-1"
@@ -61,7 +61,7 @@ background = "#000000"
 line-color = "#555555"
 line-width = 2
 #font = "RobotoMono Nerd Font Mono Lt:size=16"
-font = "CaskaydiaCode Nerd Font Mono:size=16"
+font = "CaskaydiaCove Nerd Font Mono:size=16"
 
 [default]
 label-foreground = "#bbbbbb"
@@ -159,9 +159,9 @@ mouse-left = "pavucontrol"
 interval = 10
 
 [battery]
-label =""
 command = "~/.local/bin/battery.sh"
 interval = 5
+raw = true
 #   mouse-left="alacritty --class powertop -e powertop"
 
 [date]
