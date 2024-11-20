@@ -19,3 +19,10 @@
 .config/transmission-daemon/
 .config/systemd/
 .config/waybar/
+.config/sway/
+.config/neofetch/
+.config/QtProject.conf
+.config/pavucontrol.ini
+.config/inkscape/
+.config/mc/
+

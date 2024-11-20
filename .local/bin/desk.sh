@@ -22,9 +22,13 @@ done
 DSK_OUT=""
 for i in $(bspc query -D -m ${1} --names); do
    if [ $i == $DSK_FOCUS ]; then
-        DSK_OUT="$DSK_OUT [${dsk[$i]}:${i}]"
+        DSK_OUT="$DSK_OUT %{F#FFFF00}${dsk[$i]}:${i}%{F-}"
    else
-        DSK_OUT="$DSK_OUT ${dsk[$i]}:${i}${dskw[$i]}"
+     if [ "-${dskw[$i]}-" == "-*-" ]; then
+       DSK_OUT="$DSK_OUT %{F#006600}${dsk[$i]}:${i}%{F-}"
+     else 
+       DSK_OUT="$DSK_OUT %{F#AAAAAA}${dsk[$i]}:${i}%{F-}"
+     fi 
    fi
 done
 
