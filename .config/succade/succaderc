@@ -27,7 +27,7 @@ font = "CaskaydiaCove Nerd Font Mono:size=14"
 [edp1]
 command="~/.local/bin/lemonbar -O eDP-1 -f 'CaskaydiaCove Nerd Font Mono:size=10'"
 name = "edp1"
-blocks = "desk_edp1 user || weather wlan memory mail tasks notes syncthing sound battery date"
+blocks = "desk_edp1 user smarthouse|| weather wlan memory mail tasks notes syncthing sound_mute sound_low sound_high sound_volume battery date"
 height = 32
 #areas = 16
 foreground = "#aaaaaa"
@@ -36,6 +36,10 @@ line-color = "#555555"
 line-width = 2
 #font = "RobotoMono Nerd Font Mono Lt:size=16"
 #font = "CaskaydiaCove Nerd Font Mono:size=16"
+margin = 2
+#padding-left = 1
+padding = 2
+underline = true
 
 [dp1]
 command="~/.local/bin/lemonbar -O DP-1"
@@ -68,7 +72,7 @@ label-foreground = "#bbbbbb"
 affix-foreground = "#555555"
 margin = 8
 padding-left = 1
-underline = false
+underline = true
 overline = false
 
 [desk_dp0]
@@ -142,9 +146,9 @@ interval = 5
 mouse-left="alacritty --class notes -e zk edit --interactive --sort=modified-"
 
 [syncthing]
-command = "echo 1"
-label = "\uf2f1"
+command = "~/.local/bin/syncthing/status.sh"
 mouse-left="syncthing"
+raw = true
 interval = 10
 
 [wlan]
@@ -153,11 +157,34 @@ interval = 5
 label = "\uf1eb"
 mouse-left = wpa_gui
 
-[sound]
-label = "S"
-command = "echo 1"
-mouse-left = "pavucontrol"
+[sound_mute]
+command = "~/.local/bin/volume/status.sh mute"
+mouse-left = "~/.local/bin/volume/control.sh mute"
+mouse-right = "pavucontrol"
+raw = true
 interval = 10
+
+[sound_low]
+command = "~/.local/bin/volume/status.sh low"
+mouse-left = "~/.local/bin/volume/control.sh low"
+mouse-right = "pavucontrol"
+raw = true
+interval = 10
+
+[sound_high]
+command = "~/.local/bin/volume/status.sh high"
+mouse-left = "~/.local/bin/volume/control.sh high"
+mouse-right = "pavucontrol"
+raw = true
+interval = 10
+
+[sound_volume]
+command = "~/.local/bin/volume/status.sh volume"
+mouse-left = "pavucontrol"
+mouse-right = "pavucontrol"
+raw = true
+interval = 10
+
 
 [battery]
 command = "~/.local/bin/battery.sh"
@@ -169,3 +196,9 @@ raw = true
 label = "\uf017"
 command = "date +'%Y-%m-%d %H:%M:%S'"
 interval = 1
+
+[smarthouse]
+command = "~/.local/bin/smarthouse.sh" 
+mouse-left = "xdg-open http://192.168.0.4/#!/dashboards/flat?hmi"
+raw = true
+interval = 10
