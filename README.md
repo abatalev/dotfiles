@@ -7,6 +7,13 @@ chmod +x install.sh
 ./install.sh
 ```
 
+## Update 
+
+```sh
+chmod +x update.sh
+./update.sh
+```
+
 ## Applications
 
 ### bspwm + succade + lemonbar
