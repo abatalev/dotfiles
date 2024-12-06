@@ -140,10 +140,11 @@ mouse-left="alacritty --class tasks -e taskwarrior-tui"
 mouse-right="alacritty --class tasks -e task burndown.daily"
 
 [notes]
-command = "echo 1"
-label = "\uf249"
+command = "~/.local/bin/notes/status.sh"
 interval = 5
-mouse-left="alacritty --class notes -e zk edit --interactive --sort=modified-"
+mouse-left="alacritty --class cur-notes -e ~/.local/bin/notes/editall.sh"
+mouse-right="alacritty --class cur-notes -e ~/.local/bin/notes/editbad.sh"
+raw = true
 
 [syncthing]
 command = "~/.local/bin/syncthing/status.sh"

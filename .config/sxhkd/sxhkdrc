@@ -21,7 +21,7 @@ super + @space
 	.local/bin/fdmenu
 
 super + n
-	alacritty --class cur-notes -e zk edit --interactive --sort=modified-
+	alacritty --class cur-notes -e ~/.local/bin/notes/editall.sh
 
 super + z
 	alacritty --class cur-tasks -e taskwarrior-tui
