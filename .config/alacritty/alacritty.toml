@@ -1,13 +1,18 @@
+# fc-list : family style | grep Mono 
 [font]
-size = 10
+size = 20
 
 [font.bold]
-family = "Fira Code"
+family = "CaskaydiaMono Nerd Font"
 style = "Bold"
 
 [font.normal]
-family = "Fira Code"
+family = "CaskaydiaMono Nerd Font"
 style = "Regular"
+
+[font.italic]
+family = "CaskaydiaMono Nerd Font"
+style = "Italic"
 
 [window]
 opacity = 0.8

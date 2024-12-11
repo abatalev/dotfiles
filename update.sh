@@ -11,6 +11,7 @@ do
 done
 
 cp -u .xinitrc ${HOME}/
+cp -u .zshrc ${HOME}/
 cp -r -u .config/* ${HOME}/.config/
 cp -r -u .local/* ${HOME}/.local/
 

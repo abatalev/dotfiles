@@ -3,6 +3,7 @@
 CDIR=$(pwd)
 
 cp -R ${HOME}/.config/ ${CDIR}/
+cp ${HOME}/.zshrc ${CDIR}/
 cp ${HOME}/.xinitrc ${CDIR}/
 cp ${HOME}/.xbindkeysrc ${CDIR}/
 while IFS= read -r line
