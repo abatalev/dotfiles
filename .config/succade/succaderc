@@ -1,7 +1,7 @@
 [DP-0]
 command="~/.local/bin/lemonbar -O DP-0"
 name = "dp0"
-blocks = "desk_dp0 user || mail tasks notes syncthing date"
+blocks = "desk_dp0 user || smarthouse weather mail tasks notes syncthing sound_mute sound_low sound_high sound_volume date"
 height = 32
 #areas = 0
 foreground = "#aaaaaa"
