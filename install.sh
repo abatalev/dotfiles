@@ -27,10 +27,10 @@ if [ "${OS_ID}" == "arch" ]; then
         task taskwarrior-tui zk fzf mutt thunderbird syncthing \
         zsh git vim \
         wpa_supplicant \
-        docker docker-compose \
+        docker docker-compose docker-buildx\
         brightnessctl redshift jq \
-        neovim tmux \
-        amixer dunst libnotify
+        neovim vim-spell-ru tmux \
+        amixer dunst libnotify 
 
     # TODO yay xkb-switch    
 else
