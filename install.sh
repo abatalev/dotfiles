@@ -31,6 +31,8 @@ if [ "${OS_ID}" == "arch" ]; then
         brightnessctl redshift jq \
         neovim tmux \
         amixer dunst libnotify
+
+    # TODO yay xkb-switch    
 else
     echo "!!! Unknown distro ($OS_ID)! Install packages skipped"
 fi
@@ -51,6 +53,8 @@ if [ ! -d "$HOME/.config/oh-my-zsh" ]; then
 else
     echo "!!! Directory oh-my-zsh already exists. Skipped!"
 fi
+
+# TODO .zshrc
 
 echo "!!! Install configs"
 if [ ! -f "${HOME}/.xinitrc" ]; then

@@ -37,6 +37,16 @@ chmod +x update.sh
 
 - zk -- https://github.com/mickael-menu/zk
 
-## TODO
+## To do
 
 - bat -- https://github.com/sharkdp/bat
+
+- .zshrc
+
+```
+plugins=(git docker golang taskwarrior systemd)
+source $ZSH/oh-my-zsh.sh
+export LANG=ru_RU.UTF-8
+```
+
+- oh my posh -- https://ohmyposh.dev/
