@@ -1,0 +1,16 @@
+require("core.configs")
+require("core.mappings")
+require("core.lazy")
+-- --
+-- require('setuplazy')
+-- require('setupneotree')
+-- require('setuptreesitter')
+-- require('setuplspconfig')
+-- require('setupcmp')
+-- require('setupmason')
+-- require('setuptelescope')
+-- require('setupgitsigns')
+-- require('setuplualine')
+-- require('setupwhichkey')
+-- require('setupzknvim')
+

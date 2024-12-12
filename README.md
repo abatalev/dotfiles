@@ -37,6 +37,8 @@ chmod +x update.sh
 
 - zk -- https://github.com/mickael-menu/zk
 
-## TODO
+## To do
 
 - bat -- https://github.com/sharkdp/bat
+
+- oh my posh -- https://ohmyposh.dev/

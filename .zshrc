@@ -70,9 +70,9 @@ ZSH_CUSTOM=$HOME/.config/zsh-custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
+plugins=(git docker golang taskwarrior systemd)
 source $ZSH/oh-my-zsh.sh
+export LANG=ru_RU.UTF-8
 
 # User configuration
 

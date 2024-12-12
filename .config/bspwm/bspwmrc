@@ -53,5 +53,7 @@ bspc rule -a 'notes' desktop='IV' focus=on follow=on
 bspc rule -a 'thunderbird' desktop='IV' focus=on follow=on
 bspc rule -a 'pavucontrol' state=floating floating=on focus=on follow=on rectangle=800x600+1200+50
 bspc rule -a 'tmux0' desktop='I' focus=on follow=on
+bspc rule -a 'cur-notes' state=floating floating=on focus=on follow=on rectangle=2000x1300+100+100
+bspc rule -a 'cur-tasks' state=floating floating=on focus=on follow=on rectangle=2000x1300+100+100
 
 alacritty --class tmux0 -e .local/bin/rmux.sh
