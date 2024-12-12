@@ -9,6 +9,11 @@ extension = "md"
 author = "andrey"
 
 [tool]
-editor = "vim"
+editor = "nvim"
 shell = "/usr/bin/zsh"
 pager = "less -FIRX"
+#fzf-preview = "bat -p --color always {-1}"
+fzf-preview = "zk list --quiet --format full --limit 1 {-1}"
+#fzf-preview = "glow {-1}"
+#fzf-line = "{{style 'blue' rel-path}}{{#each tags}} #{{this}}{{/each}} {{style 'black' body}}"
+
