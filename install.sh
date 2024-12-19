@@ -30,8 +30,10 @@ if [ "${OS_ID}" == "arch" ]; then
         docker docker-compose docker-buildx\
         brightnessctl redshift jq \
         neovim vim-spell-ru tmux \
-        amixer dunst libnotify 
+        dunst libnotify \
+        yazi broot bat zoxide 
 
+    # TODO amixer
     # TODO yay xkb-switch    
 else
     echo "!!! Unknown distro ($OS_ID)! Install packages skipped"
