@@ -25,7 +25,7 @@ line-width = 2
 font = "CaskaydiaCove Nerd Font Mono:size=14"
 
 [edp1]
-command="~/.local/bin/lemonbar -O eDP-1 -f 'CaskaydiaCove Nerd Font Mono:size=10'"
+command="~/.local/bin/lemonbar -O eDP-1 -f 'CaskaydiaCove Nerd Font Mono:size=8'"
 name = "edp1"
 blocks = "desk_edp1 user smarthouse|| weather wlan memory mail tasks notes syncthing sound_mute sound_low sound_high sound_volume battery date"
 height = 32
@@ -115,8 +115,8 @@ command = "whoami"
 label = "\uf007"
 
 [weather]
-command = "~/.local/bin/weather.sh"
-interval = 60
+command = "~/.local/bin/weather/status.sh"
+interval = 120
 mouse-left = "xdg-open https://www.gismeteo.ru/weather-sankt-peterburg-4079/"
 
 [memory]
@@ -186,7 +186,6 @@ mouse-right = "pavucontrol"
 raw = true
 interval = 10
 
-
 [battery]
 command = "~/.local/bin/battery.sh"
 interval = 5
@@ -194,9 +193,9 @@ raw = true
 #   mouse-left="alacritty --class powertop -e powertop"
 
 [date]
-label = "\uf017"
-command = "date +'%Y-%m-%d %H:%M:%S'"
-interval = 1
+command = "~/.local/bin/date/status.sh"
+raw = true
+interval = 30
 
 [smarthouse]
 command = "~/.local/bin/smarthouse.sh" 
