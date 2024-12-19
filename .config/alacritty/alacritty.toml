@@ -1,3 +1,20 @@
+[env]
+WINIT_X11_SCALE_FACTOR = "1"
+
+[[hints.enabled]]
+command = "xdg-open" # On Linux/BSD
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+binding = { key = "O", mods = "Control" }
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+
+[[hints.enabled]]
+regex = '[^ ]+(?:\s*)$' 
+command = { program = "tmux", args = ["split-window", "-h", "-c", "#{pane_current_path}", "sh", "-c", "nvim \"$0\""] }
+binding = { key = "2", mods = "Control" }
+
 # fc-list : family style | grep Mono 
 [font]
 size = 20
