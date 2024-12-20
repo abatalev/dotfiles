@@ -31,7 +31,7 @@ if [ "${OS_ID}" == "arch" ]; then
         brightnessctl redshift jq \
         neovim vim-spell-ru tmux \
         dunst libnotify \
-        yazi broot bat zoxide 
+        yazi zoxide broot bat sshpass
 
     # TODO amixer
     # TODO yay xkb-switch    
