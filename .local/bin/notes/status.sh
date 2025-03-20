@@ -1,7 +1,7 @@
 #!/bin/sh
-tagless=$(~/.local/bin/zk list -P -q --format=oneline --tagless | wc -l)
-orphan=$(~/.local/bin/zk list -P -q --format=oneline --orphan | wc -l)
-all=$(~/.local/bin/zk list -P -q --format=oneline | wc -l)
+tagless=$(zk list -P -q --format=oneline --tagless | wc -l)
+orphan=$(zk list -P -q --format=oneline --orphan | wc -l)
+all=$(zk list -P -q --format=oneline | wc -l)
 echo -e "${tagless}|${orphan}|${all}"
 
 out="\uf249"
