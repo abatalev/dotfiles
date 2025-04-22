@@ -70,7 +70,7 @@ ZSH_CUSTOM=$HOME/.config/zsh-custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker golang taskwarrior systemd eza zoxide kubectl minikube)
+plugins=(git docker golang taskwarrior systemd eza fzf zoxide kubectl minikube)
 source $ZSH/oh-my-zsh.sh
 export LANG=ru_RU.UTF-8
 
@@ -99,5 +99,12 @@ export LANG=ru_RU.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias la="eza -la --icons --git"
+alias lg="eza -la --icons --git-repos"
+
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/andrey/.sdkman"
+[[ -s "/home/andrey/.sdkman/bin/sdkman-init.sh" ]] && source "/home/andrey/.sdkman/bin/sdkman-init.sh"
