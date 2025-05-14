@@ -15,3 +15,5 @@ do
     fi
   fi
 done < ".gitignore"
+
+pacman -Q | awk '{ print $1; }' > packages.txt

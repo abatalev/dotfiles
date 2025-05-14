@@ -3,7 +3,11 @@ return {
 	event = "VimEnter",
 	opts = {
 		current_line_blame = true,
-		delay = 500,
+		current_line_blame_opts = {
+			virt_text = true,
+			virt_text_pos = 'eol',
+			delay = 500,
+		},
 		current_line_blame_formatter = '<author>, <author_time:%R> - <summary>'
 	},
 	keys = {

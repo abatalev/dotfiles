@@ -20,15 +20,24 @@ binding = { key = "2", mods = "Control" }
 size = 20
 
 [font.bold]
-family = "CaskaydiaMono Nerd Font"
+#family = "CaskaydiaMono Nerd Font"
+#family = "Hurmit Nerd Font"
+family = "Monofur Nerd Font"
+#family = "M+1Code Nerd Font"
 style = "Bold"
 
 [font.normal]
-family = "CaskaydiaMono Nerd Font"
+#family = "CaskaydiaMono Nerd Font"
+#family = "Hurmit Nerd Font"
+#family = "IosevkaTerm Nerd Font"
+family = "Monofur Nerd Font"
+#family = "M+1Code Nerd Font"
 style = "Regular"
 
 [font.italic]
-family = "CaskaydiaMono Nerd Font"
+#family = "CaskaydiaMono Nerd Font"
+#family = "Hurmit Nerd Font"
+family = "Monofur Nerd Font"
 style = "Italic"
 
 [window]

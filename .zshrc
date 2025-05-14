@@ -70,7 +70,7 @@ ZSH_CUSTOM=$HOME/.config/zsh-custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker golang taskwarrior systemd eza zoxide)
+plugins=(git docker golang taskwarrior systemd eza zoxide kubectl minikube)
 source $ZSH/oh-my-zsh.sh
 export LANG=ru_RU.UTF-8
 
@@ -99,3 +99,4 @@ export LANG=ru_RU.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+eval "$(starship init zsh)"
