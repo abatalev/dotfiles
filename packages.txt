@@ -89,7 +89,7 @@ double-conversion
 duktape
 dunst
 e2fsprogs
-electron34
+electron35
 elfutils
 ell
 enchant
@@ -132,6 +132,7 @@ geany
 gettext
 giflib
 git
+git-bug
 gitui
 glib-networking
 glib2
@@ -155,6 +156,7 @@ gobject-introspection-runtime
 gopls
 gperftools
 gpgme
+gpgmepp
 gpm
 graphene
 graphicsmagick
@@ -277,6 +279,7 @@ libcups
 libdaemon
 libdatrie
 libdca
+libde265
 libdecor
 libdeflate
 libdispatch
@@ -315,6 +318,7 @@ libglvnd
 libgpg-error
 libgudev
 libgusb
+libheif
 libical
 libice
 libid3tag
@@ -640,8 +644,6 @@ rtkit
 rubberband
 runc
 rustup
-rxvt-unicode
-rxvt-unicode-terminfo
 scrot
 sdl2-compat
 sdl3
@@ -706,6 +708,7 @@ ttf-font-awesome
 ttf-iosevka-nerd
 ttf-iosevkaterm-nerd
 ttf-iosevkatermslab-nerd
+ttf-jetbrains-mono
 ttf-liberation
 ttf-monofur-nerd
 ttf-mplus-nerd
@@ -715,6 +718,7 @@ ttf-opensans
 ttf-roboto
 ttf-roboto-mono-nerd
 twolame
+typst
 tzdata
 udisks2
 unibilium
@@ -747,6 +751,7 @@ webkit2gtk-4.1
 webkitgtk-6.0
 webrtc-audio-processing-0.3
 webrtc-audio-processing-1
+wezterm
 wget
 which
 wireplumber

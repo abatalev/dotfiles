@@ -4,10 +4,12 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	wezterm
+#	alacritty
 
 super + shift + Return
-	alacritty -e .local/bin/rmux.sh
+	wezterm -e ~/.local/bin/rmux.sh
+#	alacritty -e ~/.local/bin/rmux.sh
 
 # chromium
 super + c
@@ -21,10 +23,12 @@ super + @space
 	.local/bin/fdmenu
 
 super + n
-	alacritty --class cur-notes -e ~/.local/bin/notes/editall.sh
+	wezterm -e --class='cur-notes' ~/.local/bin/notes/editall.sh 
+#	alacritty --class cur-notes -e ~/.local/bin/notes/editall.sh
 
 super + z
-	alacritty --class cur-tasks -e taskwarrior-tui
+	wezterm -e --class='cur-tasks' taskwarrior-tui
+#	alacritty --class cur-tasks -e taskwarrior-tui
 
 # make sxhkd reload its configuration files:
 super + Escape
