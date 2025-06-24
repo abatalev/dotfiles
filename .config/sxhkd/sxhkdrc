@@ -16,7 +16,7 @@ super + c
 	chromium
 
 super + m
-	telegram-desktop
+	Telegram
 
 # program launcher
 super + @space
