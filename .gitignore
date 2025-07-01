@@ -27,3 +27,4 @@
 .config/mc/
 .config/polybar/
 .config/yandex-browser/
+.config/nvim/lazy-lock.json
