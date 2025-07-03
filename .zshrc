@@ -101,3 +101,18 @@ export LANG=ru_RU.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias la="eza -la --icons --git"
 alias lg="eza -la --icons --git-repos"
+
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+eval "$(starship init zsh)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/andrey/.sdkman"
+[[ -s "/home/andrey/.sdkman/bin/sdkman-init.sh" ]] && source "/home/andrey/.sdkman/bin/sdkman-init.sh"
+
+# pnpm
+export PNPM_HOME="/home/andrey/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
