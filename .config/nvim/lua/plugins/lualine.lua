@@ -13,27 +13,41 @@ return {
 				grey   = '#303030',
 			}
 
-			local bubbles_theme = {
+			local current_theme = {
 				normal = {
 					a = { fg = colors.black, bg = colors.violet },
-					b = { fg = colors.white, bg = colors.grey },
-					c = { fg = colors.white },
+					b = {
+						fg = colors.white,
+						bg = "NONE",
+						-- ctermbg = "NONE"
+					},
+					c = { fg = colors.white, bg = "NONE" },
+					y = { fg = colors.white, bg = colors.grey },
 				},
 
-				insert = { a = { fg = colors.black, bg = colors.blue } },
-				visual = { a = { fg = colors.black, bg = colors.cyan } },
-				replace = { a = { fg = colors.black, bg = colors.red } },
+				insert = {
+					a = { fg = colors.black, bg = colors.blue },
+					y = { fg = colors.white, bg = colors.grey },
+				},
+				visual = {
+					a = { fg = colors.black, bg = colors.cyan },
+					y = { fg = colors.white, bg = colors.grey },
+				},
+				replace = {
+					a = { fg = colors.black, bg = colors.red },
+					y = { fg = colors.white, bg = colors.grey },
+				},
 
 				inactive = {
 					a = { fg = colors.white, bg = colors.black },
 					b = { fg = colors.white, bg = colors.black },
-					c = { fg = colors.white },
+					c = { fg = colors.white, bg = "NONE" },
 				},
 			}
 			require('lualine').setup({
 				options = {
 					globalstatus = true,
-					-- theme = bubbles_theme,
+					theme = current_theme,
 					component_separators = { left = '', right = '' },
 					section_separators = { left = '', right = '' },
 				},
